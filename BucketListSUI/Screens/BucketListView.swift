@@ -9,22 +9,21 @@ import SwiftUI
 
 struct BucketListView: View {
     @EnvironmentObject private var dataStore: DataStore
-    @State private var newItem = ""
+    @State private var newItemName = ""
     
     var body: some View {
         NavigationStack {
             VStack {
                 HStack {
-                    TextField("New bucket", text: $newItem)
+                    TextField("New bucket", text: $newItemName)
                         .textFieldStyle(.roundedBorder)
-                    
                     Button {
-                        dataStore.create(newItem)
-                        newItem = ""
+                        dataStore.create(newItemName)
+                        newItemName = ""
                     } label: {
                         Image(systemName: "plus.circle.fill")
                     }
-                    .disabled(newItem.isEmpty)
+                    .disabled(newItemName.isEmpty)
                 }
                 .padding()
                 if !dataStore.bucketList.isEmpty {
@@ -37,7 +36,6 @@ struct BucketListView: View {
                                     .foregroundColor(
                                         item.completedDate == .distantPast ? .primary : .red)
                             }
-                            .onChange(of: item) { dataStore.saveList() }
                             .listRowSeparator(.hidden)
                         }
                         .onDelete(perform: { indexSet in
@@ -47,17 +45,12 @@ struct BucketListView: View {
                     .listStyle(.plain)
 
                 } else {
-                    Text("List is empty. Add your first Bucket.")
-                    Image(systemName: "trash")
-                        .resizable()
-                        .frame(width: 80)
-                        .aspectRatio(contentMode: .fit)
-                    Spacer()
+                    EmptyStateView()
                 }
             }
             .navigationTitle("Bucket List")
             .navigationDestination(for: BucketItem.self) { item in
-                ItemDetailView(bucketItem: item)
+                ItemDetailView(item: item)
             }
         }
     }
