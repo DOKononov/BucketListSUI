@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560A09B52B94C7F4001DC67E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A09B42B94C7F4001DC67E /* DataStore.swift */; };
 		5640021F2B945A0C004F9017 /* BucketListSUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5640021E2B945A0C004F9017 /* BucketListSUIApp.swift */; };
-		564002212B945A0C004F9017 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564002202B945A0C004F9017 /* ContentView.swift */; };
+		564002212B945A0C004F9017 /* BucketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564002202B945A0C004F9017 /* BucketListView.swift */; };
 		564002232B945A0D004F9017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564002222B945A0D004F9017 /* Assets.xcassets */; };
 		564002262B945A0D004F9017 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564002252B945A0D004F9017 /* Preview Assets.xcassets */; };
+		5640022D2B945F3D004F9017 /* BucketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5640022C2B945F3D004F9017 /* BucketItem.swift */; };
+		5640022F2B946249004F9017 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5640022E2B946249004F9017 /* ItemDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		560A09B42B94C7F4001DC67E /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		5640021B2B945A0C004F9017 /* BucketListSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketListSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5640021E2B945A0C004F9017 /* BucketListSUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListSUIApp.swift; sourceTree = "<group>"; };
-		564002202B945A0C004F9017 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		564002202B945A0C004F9017 /* BucketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListView.swift; sourceTree = "<group>"; };
 		564002222B945A0D004F9017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		564002252B945A0D004F9017 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5640022C2B945F3D004F9017 /* BucketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItem.swift; sourceTree = "<group>"; };
+		5640022E2B946249004F9017 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				5640021E2B945A0C004F9017 /* BucketListSUIApp.swift */,
-				564002202B945A0C004F9017 /* ContentView.swift */,
+				564002202B945A0C004F9017 /* BucketListView.swift */,
+				560A09B42B94C7F4001DC67E /* DataStore.swift */,
+				5640022E2B946249004F9017 /* ItemDetailView.swift */,
+				5640022C2B945F3D004F9017 /* BucketItem.swift */,
 				564002222B945A0D004F9017 /* Assets.xcassets */,
 				564002242B945A0D004F9017 /* Preview Content */,
 			);
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				564002212B945A0C004F9017 /* ContentView.swift in Sources */,
+				5640022F2B946249004F9017 /* ItemDetailView.swift in Sources */,
+				5640022D2B945F3D004F9017 /* BucketItem.swift in Sources */,
+				564002212B945A0C004F9017 /* BucketListView.swift in Sources */,
+				560A09B52B94C7F4001DC67E /* DataStore.swift in Sources */,
 				5640021F2B945A0C004F9017 /* BucketListSUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
